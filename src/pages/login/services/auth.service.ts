@@ -26,12 +26,7 @@ export class AuthService {
   }
 
   register(data: RegisterCredential) {
-    return this.http.post<Token>(`${server}/api/user`, {
-      "username": data.username,
-      "email": data.email,
-      "password": data.password,
-      "confirmPassword": data.password
-    })
+    return this.http.post<Token>(`${server}/api/user`, data)
   }
 
 }

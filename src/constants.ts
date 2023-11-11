@@ -1,1 +1,1 @@
-export const server = "https://test-dep.azurewebsites.net"
+export const server = "https://restaurant-rate.azurewebsites.net"
