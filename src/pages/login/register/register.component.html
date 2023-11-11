@@ -1,0 +1,58 @@
+<div class="container flex h-full justify-center items-center gap-10 flex-col ">
+  <form [formGroup]="registerForm" class=" flex flex-wrap flex-col gap-3 justify-center items-center border-2 p-10 border-indigo-500"
+        method="post">
+    <div class="flex flex-col w-96 ">
+
+      <button mat-raised-button class="mb-5"> Make GOOGLE LOGIN</button>
+
+      <div class="w-96 flex flex-row flex-1 items-center mb-5">
+        <div class="w-full bg-indigo-500 h-0.5"></div>
+        <span class="mx-3">OR</span>
+        <div class=" w-full bg-indigo-500 h-0.5"></div>
+      </div>
+
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="registerForm.controls.email">
+        <!--      <span matTextSuffix="">-->
+        <!--                <mat-icon color="primary">user</mat-icon>-->
+        <!--      </span>-->
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [formControl]="registerForm.controls.name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput [formControl]="registerForm.controls.username">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput [formControl]="registerForm.controls.password">
+      </mat-form-field>
+
+
+      <button color="primary" class="mb-3" mat-raised-button [disabled]="!registerForm.valid" (click)="register()" >Submit</button>
+
+    </div>
+
+  </form>
+
+  <div class="border-2 w-96 px-10 py-5 border-blue-500 flex items-center justify-center">
+    <p class="">Have an account?
+      <a routerLink="/login" class="text-indigo-600 font-bold">
+        Log in
+      </a>
+    </p>
+  </div>
+
+</div>
+
+
+
+
+

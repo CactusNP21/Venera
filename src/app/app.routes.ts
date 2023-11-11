@@ -5,6 +5,6 @@ export const routes: Routes = [
     path: '', pathMatch: "full", redirectTo: "/login"
   },
   {
-    path: 'login', loadComponent: () => import('../pages/login/login.component').then(value => value.LoginComponent)
+    path: 'login', loadChildren: () => import('../pages/login/login.routes').then(m => m.LoginRoutes)
   }
 ];
