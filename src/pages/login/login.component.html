@@ -1,0 +1,33 @@
+<div class="container flex h-full justify-center items-center gap-1 flex-col ">
+  <form [formGroup]="loginForm" class=" flex flex-wrap justify-center items-center border-2 p-10">
+    <div class="flex flex-col align-baseline w-96 ">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput [formControl]="loginForm.controls.username">
+        <!--      <span matTextSuffix="">-->
+        <!--                <mat-icon color="primary">user</mat-icon>-->
+        <!--      </span>-->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput [formControl]="loginForm.controls.password">
+      </mat-form-field>
+
+      <button color="primary" class="mb-3" mat-raised-button  [disabled]="!loginForm.valid">Log in</button>
+
+      <div class="w-96 flex flex-row flex-1 justify-between">
+        <div class="">r</div>
+        <p class="">OR</p>
+        <div class="">r</div>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+
+
+
+
+
