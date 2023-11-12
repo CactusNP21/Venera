@@ -14,7 +14,7 @@
         <input matInput [formControl]="loginForm.controls.password">
       </mat-form-field>
 
-      <button color="primary" class="mb-3" mat-raised-button [disabled]="!loginForm.valid">Log in</button>
+      <button color="primary" class="mb-3" mat-raised-button [disabled]="!loginForm.valid" (click)="login()">Log in</button>
 
       <div class="w-96 flex flex-row flex-1 items-center mb-5">
         <div class="w-full bg-indigo-500 h-0.5"></div>
@@ -22,7 +22,7 @@
         <div class=" w-full bg-indigo-500 h-0.5"></div>
       </div>
 
-      <button mat-raised-button class="mb-5"> Make GOOGLE LOGIN</button>
+      <button mat-raised-button class="mb-5" > Make GOOGLE LOGIN</button>
     </div>
     <a role="link">
       <span routerLink="password-reset">Forgot password? //TODO</span>

@@ -22,11 +22,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(data: LoginCredential) {
-    this.http.post<Token>(`${server}/api/auth/login`, data).subscribe
+    return this.http.post<Token>(`${server}/api/auth/login`, data)
   }
 
   register(data: RegisterCredential) {
-    return this.http.post<Token>(`${server}/api/user`, data)
+    return this.http.post<Token>(`${server}/api/users`, data)
   }
 
 }

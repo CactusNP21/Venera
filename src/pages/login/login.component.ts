@@ -6,6 +6,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {provideRouter, RouterLink, RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {LoginRoutes} from "./login.routes";
+import {AuthService} from "./services/auth.service";
 
 
 
@@ -17,7 +18,7 @@ import {LoginRoutes} from "./login.routes";
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private auth: AuthService) {
   }
 
   loginForm = this.fb.nonNullable.group({
@@ -26,7 +27,13 @@ export class LoginComponent {
   });
 
   login() {
-
+    if (this.loginForm.valid) {
+      const data = this.loginForm.getRawValue()
+      console.log(1)
+      this.auth.login(data).subscribe(value => {
+        console.log(value)
+      })
+    }
   }
 
 }
