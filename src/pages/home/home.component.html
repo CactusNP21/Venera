@@ -1,0 +1,19 @@
+<div class="container flex flex-col justify-center items-center">
+  <div class="flex">
+    <p>Search</p>
+    <mat-form-field class="">
+      <input matInput>
+    </mat-form-field>
+  </div>
+  <div class="flex-row flex ">
+    @for (rest of restaurants; track rest.name) {
+      <div>
+        <img src="{{rest.posterUrl}}" class="w-12 h-12" >
+        {{rest.name}}
+      </div>
+    }
+  </div>
+
+</div>
+
+
